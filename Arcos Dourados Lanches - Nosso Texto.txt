@@ -1,0 +1,7 @@
+Arcos Dourados Lanches
+
+Recentemente abri uma lanchonete e gostaria de um software.
+Nele eu gostaria de um design minimalista com foco nas cores amarela e vermelha, destacando os produtos e preços.
+O site deve contar um sistema de delivery e de compra online para retirada, o usuário deve criar uma conta com seu nome, cpf, endereço, numero e email.
+Na parte de baixo do site deve conter um breve introdução da nossa loja, faq e um suporte virtual para duvidas ou erros.
+O site deve ter abas como categorias, cardápio e promoções.
