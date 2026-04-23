@@ -1,0 +1,5 @@
+-Colocar tudo no word (até a versão antiga);
+-Melhorar a história do cliente;
+-Fazer tabela com as entidades;
+-Fazer novo diagrama físico no draw.io com as dicas dadas em aula;
+-Fazer dicionário de dados.

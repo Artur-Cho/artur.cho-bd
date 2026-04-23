@@ -1,0 +1,45 @@
+Arcos Dourados Lanches
+
+A Arcos Dourados Lanches é uma lanchonete recém-inaugurada que busca unir qualidade, agilidade e tecnologia para oferecer a melhor experiência aos seus clientes. Inspirada no modelo de grandes redes como a McDonald's, a empresa pretende utilizar um sistema web próprio para gerenciar pedidos, clientes e pagamentos de forma organizada e segura. Para isso, é necessário o desenvolvimento de um software com foco tanto na experiência do usuário quanto na estruturação eficiente do banco de dados.
+
+Design e Interface do Sistema
+
+O sistema deverá apresentar um design minimalista, utilizando predominantemente as cores amarela e vermelha, transmitindo dinamismo e identidade visual marcante. A interface precisa ser intuitiva, destacando os produtos com imagens de qualidade, descrição detalhada, lista de ingredientes e preços atualizados dinamicamente a partir do banco de dados.
+
+O site será organizado em abas como “Categorias”, “Cardápio” e “Promoções”, permitindo fácil navegação. No rodapé da página, haverá uma breve introdução institucional da loja, uma seção de perguntas frequentes (FAQ) e um suporte virtual para esclarecimento de dúvidas ou registro de problemas.
+
+Cadastro de Usuários e Estrutura de Dados
+
+Para realizar pedidos, o cliente deverá criar uma conta informando nome completo, CPF, endereço, número da residência, e-mail e telefone. Esses dados serão armazenados em uma tabela específica no banco de dados, com CPF e e-mail definidos como campos únicos para evitar duplicidade de registros.
+
+A senha do usuário deverá ser armazenada de forma criptografada (hash), garantindo maior segurança das informações. Além disso, o sistema permitirá que um mesmo usuário cadastre mais de um endereço, estabelecendo um relacionamento do tipo um-para-muitos (1:N) entre as tabelas de usuário e endereço.
+
+Sistema de Pedidos e Controle de Entregas
+
+O sistema permitirá dois tipos de compra: delivery ou retirada no local. Após a confirmação da compra, será gerado automaticamente um código único de pedido, que servirá para identificação tanto na retirada quanto no acompanhamento da entrega.
+
+Cada pedido será armazenado em uma tabela própria, contendo informações como data, tipo de entrega, status (pendente, em preparo, enviado ou finalizado) e valor total. Os itens do pedido serão organizados em uma tabela relacionada, permitindo que um único pedido contenha vários produtos, caracterizando um relacionamento um-para-muitos (1:N). Esse modelo garante melhor organização e escalabilidade do sistema.
+
+Cadastro de Produtos e Categorias
+
+Os produtos serão armazenados em uma tabela contendo nome, descrição, preço, imagem e categoria. As categorias (como hambúrgueres, bebidas, sobremesas e combos) estarão organizadas em uma tabela separada, criando um relacionamento um-para-muitos entre categoria e produto.
+
+Esse modelo facilita a organização do cardápio e permite a atualização dinâmica dos produtos, inclusive para promoções temporárias, que podem ser ativadas ou desativadas por meio de um campo booleano no banco de dados.
+
+Métodos de Pagamento e Segurança
+
+No momento da finalização do pedido, o cliente deverá escolher o método de pagamento, podendo optar por cartão de crédito ou débito, Pix ou boleto bancário. Essas informações serão registradas em uma tabela de pagamento vinculada ao pedido, mantendo um relacionamento um-para-um (1:1).
+
+O sistema deverá registrar o status do pagamento (pendente, aprovado ou recusado) e o código da transação, garantindo controle financeiro e rastreabilidade das operações.
+
+Suporte Virtual e Registro de Chamados
+
+O site contará com um suporte virtual integrado, permitindo que os usuários registrem dúvidas, reclamações ou erros encontrados no sistema. Essas interações serão armazenadas em uma tabela de chamados, contendo informações como usuário, data de abertura e status do atendimento.
+
+Esse recurso possibilita melhor controle de atendimento ao cliente e geração de relatórios sobre problemas recorrentes.
+
+Requisitos Técnicos do Banco de Dados
+
+O banco de dados deverá ser relacional (como MySQL ou PostgreSQL), estruturado até a Terceira Forma Normal (3FN), garantindo integridade referencial por meio de chaves primárias e estrangeiras. Também deverão ser criados índices para campos de busca frequente, como CPF, e-mail e código do pedido.
+
+Além disso, o sistema deverá contar com backup automático, controle de concorrência para evitar conflitos em pedidos simultâneos e registros de log para auditoria de alterações importantes.
